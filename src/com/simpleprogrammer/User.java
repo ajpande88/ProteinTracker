@@ -1,41 +1,26 @@
 package com.simpleprogrammer;
 
 public class User {
-	private int id;
-	private String name;
-	private int total;
-	private int goal;
-
-	public int getId() {
-		return id;
+	private int userid;
+    private String username;
+    private String password;
+	public int getUserid() {
+		return userid;
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
-
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
-	public int getTotal() {
-		return total;
+	public String getPassword() {
+		return password;
 	}
-
-	public void setTotal(int total) {
-		this.total = total;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-
-	public int getGoal() {
-		return goal;
-	}
-
-	public void setGoal(int goal) {
-		this.goal = goal;
-	}
-
+    
 }

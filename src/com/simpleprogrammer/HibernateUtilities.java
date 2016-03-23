@@ -13,21 +13,21 @@ public class HibernateUtilities {
      static 
      {
     	 try{
-    			Configuration configuration = new Configuration().configure(); 
+    	/*		Configuration configuration = new Configuration().configure(); 
     			 System.err.println("Configuration object is " + configuration);
     			serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry(); 
     			System.err.println("service registry is " + serviceRegistry);
     			sessionFactory = configuration.buildSessionFactory(serviceRegistry); 
     		System.err.println("session factory is " + sessionFactory);
-
+*/
 	
     	 }catch(HibernateException exception){
     		 System.out.println("Problem Creating session factory");
     	 }
      }
 
-    public static SessionFactory getSessionFactory(){
+   /* public static SessionFactory getSessionFactory(){
     	return sessionFactory;
-    }
+    }*/
 
 }
