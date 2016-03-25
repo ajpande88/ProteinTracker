@@ -7,6 +7,10 @@
 <title>login</title>
 </head>
 <body>
-<H1><font color="green">Login Successful</font></H1>
+<H1><font color="green">Select Options</font></H1>
+
+
+<a href='data'>Click here to go to Data page</a>
+<a href='insert.jsp'>Click here to go to Insert page</a>
 </body>
 </html>

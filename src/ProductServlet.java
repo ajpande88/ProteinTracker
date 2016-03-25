@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -7,49 +8,44 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class logoutServlet extends HttpServlet {
+import com.simpleprogrammer.User;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
+public class ProductServlet  extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rdp = null;
 		Cookie[] cookies = null;
 		cookies = request.getCookies();
 		if (cookies != null) {
 			for (Cookie cookie : cookies) {
 				if (!cookie.getName().equals("user_id")) {
 					
-					request.getRequestDispatcher("/login.jsp").forward(request, response);
+						RequestDispatcher rdp = request.getRequestDispatcher("/login.jsp");
+						rdp.forward(request, response);
 					
 					
 				}
 			}
 
 		}
-		rdp.forward(request, response);
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		Cookie[] cookies = null;
-		cookies = request.getCookies();
-		if (cookies != null) {
-			for (Cookie cookie : cookies) {
-				cookie.setValue("");
-				cookie.setPath("/");
-				cookie.setMaxAge(0);
-				response.addCookie(cookie);
-			}
-		 
-		}
-		RequestDispatcher rdp = request.getRequestDispatcher("/home.jsp");
-		rdp.forward(request, response);
+		/*RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/data.jsp");
+		ArrayList<User> list=new ArrayList<>();
+		User user1= new User();
+		user1.setUserid(2);
+		user1.setUsername("username");
+		user1.setPassword("password");
+		User user2= new User();
+		user1.setUserid(3);
+		user1.setUsername("username2");
+		user1.setPassword("password2");
 
+		
+		list.add(user1);
+		list.add(user2);
+		request.setAttribute("list",list);
+	    requestDispatcher.forward(request, response);*/
 	}
 }

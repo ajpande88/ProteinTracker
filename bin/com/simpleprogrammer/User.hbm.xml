@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Mar 22, 2016 3:47:23 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated Mar 23, 2016 10:53:27 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.simpleprogrammer.User" table="USER">
-        <id name="userid" type="int">
+        <id name="userid" type="java.lang.Integer">
             <column name="USERID" />
             <generator class="assigned" />
         </id>
@@ -14,5 +14,11 @@
         <property name="password" type="java.lang.String">
             <column name="PASSWORD" />
         </property>
+        <set name="stockDailyRecords" table="PRODUCT" inverse="false" lazy="true">
+            <key>
+                <column name="USERID" />
+            </key>
+            <one-to-many class="com.simpleprogrammer.Product" />
+        </set>
     </class>
 </hibernate-mapping>

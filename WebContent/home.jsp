@@ -9,8 +9,9 @@
 <body>
  
 <a href='login.jsp'>Click here to go to login page</a>
-<a href='logout.jsp'>Click here to go to logout page</a>
-<a href='data.jsp'>Click here to go to Data page</a>
+<a href='logout'>Click here to go to logout page</a>
+<a href='data'>Click here to go to Data page</a>
+<a href='Insert'>Click here to go to Insert page</a>
 
 </body>
 </html>
